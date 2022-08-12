@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="author" content="Bambang">
+			<title>Running Puppy</title>
+			
+			<script src="script/Lab10_part2.js"></script>
+		</head>
+		<body onload="setInterval('runPuppy()', 1000);">
+			<h1>Running Puppy</h1>
+			<p>
+				<img id="puppy" src="images/puppy.gif"
+					
+				>   
+
+			</p>
+			<script>
+				
+				var puppy = document.getElementById("puppy");
+				var puppyOriginalLocation = puppy.getBoundingClientRect();
+				var translateX = 0;
+				var translateY = 0;
+				puppy.style.transition = "0.5s";
+
+				function runPuppy() {
+					translateX += 50;
+					translateY += 50;
+					puppy.style.transform = "translateX("+translateX+"px) translateY("+translateY+"px)";
+
+					if (translateX + puppyOriginalLocation.width > window.innerWidth) {
+						translateX = 0;
+						translateY = 0;
+						puppy.style.transform = "translateX("+translateX+"px) translateY("+translateY+"px)";
+					}
+				}
+			</script>
+		</body>
+</html>

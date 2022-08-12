@@ -1,0 +1,27 @@
+input{
+    margin: 5px 0;
+}
+fieldset{
+    width: 220px;
+    padding: 10px 20px;
+    background-color:lightsteelblue;
+    margin-bottom: 10px;
+}
+
+legend{
+    background-color: slategray;
+    padding: 0 10px;
+    color: whitesmoke;
+}
+
+input[type="number"] {
+    width: 55px;
+}
+
+input[name="add"] {
+    margin-left: 5px;
+}
+
+input[type="reset"] {
+    width: 54px;
+}

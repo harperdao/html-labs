@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Layout styles for Slate and Pencil Tutoring
+   Author: Huyen Thanh Dao
+   Date:   09 June, 2022
+   Filename: sp_layout.css
+
+*/
+
+/* Window and Body Styles 
+/*3*/
+
+html {
+   height: 100%;
+}
+/*4*/
+@media (min-width:640px) and (max-width:960px) {
+   body {
+      width: 95%;
+      min-height: 100%;
+  }
+}
+/*5*/
+body img {
+   display: block;
+}
+
+
+
+
+
+/* 6 CSS Grid Styles */
+body {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+/*7*/
+#logo {
+   width: 100%;
+   grid-column: 1/4
+}
+
+/Horizontal Navigation List Styles */
+.vertical ul {
+   list-style: none;
+   padding: 0;
+}
+
+
+
+
+.vertical ul a {
+   text-decoration: none;
+}
+/*8*/
+.horizontal, footer {
+   grid-column: 1/5;
+}
+
+.row {
+   display: flex;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.horizontal ul li {
+   width: 12.5%;
+} 
+/*9*/
+.horizontal ul li a {
+   float: left;
+   text-decoration: none;
+}
+
+
+/* Section Styles */
+/*10*/
+section img {
+   width: 50%;
+   margin: 0 auto;
+}
+/*11*/
+section p {
+   width: 70%;
+   margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* Customer Comment Styles */
+aside {
+	grid-column: 2fr 2fr;
+}
+/*12*/
+aside p {
+   width: 75%;
+   padding-bottom: 30px;
+}
+
+/*13*/
+body aside:nth-of-type(odd) {
+   grid-column: 2/3;
+   justify-self: start;
+}
+
+/*14*/
+aside img {
+   float: left;
+   width: 20%;
+}
+/*15*/
+aside p {
+   float: left;
+    width: 75%;
+    margin-left: 5%;
+}
+
+
+
+
+
+
+
